@@ -133,9 +133,10 @@ AFRAME.registerComponent("atoms", {
 
       atom.appendChild(orbit);
 
-      //Crear entidad de animación de la revolución de los electrones
+      //<a-entity>
       var electronGroup = document.createElement("a-entity");
       electronGroup.setAttribute("id", `electron-group-${elementName}`);
+      
       electronGroup.setAttribute("rotation", {
         x: 0,
         y: 0,
@@ -143,7 +144,8 @@ AFRAME.registerComponent("atoms", {
       });
 
       electronAngle += 65;
-
+      
+      //animación
       electronGroup.setAttribute("animation", {
         property: "rotation",
         to: `0 0 -360`,
